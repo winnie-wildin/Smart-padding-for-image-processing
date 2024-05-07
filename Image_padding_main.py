@@ -5,7 +5,7 @@ from .utils.find_contours import find_contours
 from .utils.calculate_padding import calculate_padding
 from .utils.apply_padding import apply_padding
 from .utils.image_to_tensor import image_to_tensor
-
+from PIL import Image
 
 
 class ImagePadding:
@@ -29,5 +29,5 @@ class ImagePadding:
         bounding_rect = find_contours(thresh)
         padding = calculate_padding(bounding_rect, gray_image.shape[0], gray_image.shape[1])
         padded_image = apply_padding(image_np, padding)
-        image = image_to_tensor(padded_image)
+        image = image_to_tensor(Image.fromarray(padded_image))
         return (image,)
