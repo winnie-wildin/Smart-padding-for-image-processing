@@ -7,8 +7,7 @@ from .utils.apply_padding import apply_padding
 from .utils.image_to_tensor import image_to_tensor
 from PIL import Image
 
-
-class ImagePadding:
+class image_padding:
     @classmethod
     def INPUT_TYPES(s):
         return {
@@ -16,7 +15,7 @@ class ImagePadding:
                 "image": ("IMAGE",),
             }
         }
-    CATEGORY = "SmartPaddingxp/image"
+    CATEGORY = "SmartPadding/image"
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("image",)
     FUNCTION = "image_padding"
