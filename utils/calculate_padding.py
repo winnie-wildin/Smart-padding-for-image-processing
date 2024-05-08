@@ -15,9 +15,9 @@ def calculate_padding(bounding_rect, image_height, image_width):
         lw_result = x1 / image_width
         rw_result = (image_width - x2) / image_width
 
-        if th_result < 0.10: top = 100
-        if bh_result < 0.10: bottom = 100
-        if lw_result < 0.10: left = 100
-        if rw_result < 0.10: right = 100
+        if th_result < 0.10: top = 200
+        if bh_result < 0.10: bottom = 200
+        if lw_result < 0.10: left = 200
+        if rw_result < 0.10: right = 200
 
     return top, bottom, left, right
